@@ -1,0 +1,44 @@
+body {
+  background-color: #dfdbdb; 
+}
+
+.addButton {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #2880dd; 
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.color-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.color-list li {
+  margin: 5px 0;
+}
+
+.color-list a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  padding: 20px; 
+}
+
+.color-list {
+  width: 100%;
+  max-width: 600px; 
+}
