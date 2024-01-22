@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes';
+import './styles.css';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // Preset colors
+    const [colors, setColors] = useState({
+        red: "#FF0000",
+        green: "#00FF00",
+        blue: "#0000FF"
+    });
+
+    // Function to add a new color
+    const addColor = (newColor) => {
+        setColors(oldColors => ({ ...oldColors, [newColor.name]: newColor.value }));
+    };
+
+    return (
+        <Router>
+            <Routes colors={colors} addColor={addColor} />
+        </Router>
+    );
 }
 
 export default App;
+
